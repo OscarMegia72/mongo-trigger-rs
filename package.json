@@ -1,0 +1,20 @@
+{
+  "name": "ls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "replica": "nodemon main_replica_set.test.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "md5": "^2.2.1",
+    "moment": "^2.24.0",
+    "mongodb": "^3.3.0-beta2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
