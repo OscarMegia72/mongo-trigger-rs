@@ -17,7 +17,7 @@ module.exports = {
         MongoClient.connect(uri_mongo,{ useNewUrlParser: true },
           ).catch(err => {
               console.error(err)
-              process.exit(1)
+              reject(err)
             })
           .then(async client => {
               this.connected=client
@@ -41,12 +41,12 @@ module.exports = {
           this.connected.db(db).createCollection(col_name,options,function(err,res){
               if (err) throw err;
               if(this.isVerbose)console.log("Collection created!");
-              return resolve('ok')
+              return resolve(true)
           })
   
         }catch (e) {
           console.error(`Unable to createCollection: ${e}`)
-          return { error: e }
+          return reject (e)
         }
       }) 
     },
@@ -56,12 +56,12 @@ module.exports = {
         try{
           this.connected.db(db).collection(col_name).insertOne(doc,function(err,res){
               if (err) throw err;
-              console.log(self.isVerbose,db,col_name,doc)
-              resolve('ok')
+              if(this.isVerbose)console.log(self.isVerbose,db,col_name,doc)
+              resolve(true)
           })
         }catch (e) {
           console.error(`Unable to insert: ${e}`)
-          return { error: e }
+          return reject(e)
         }
       }) 
 
