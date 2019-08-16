@@ -1,6 +1,6 @@
 {
-  "name": "mongo-triggers-ls",
-  "version": "1.0.7",
+  "name": "mongo-triggers-rs",
+  "version": "1.0.8",
   "description": "",
   "main": "main.js",
   "scripts": {

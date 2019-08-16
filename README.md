@@ -30,7 +30,7 @@ rs.initiate()
 ##### Cadena de Conexion
 
 ```
-mongodb://localhost:27017?w=0&readPreference=primary'
+mongodb://localhost:27017?w=0&readPreference=primary
 ```
 
 ##### Ejemplo / test
