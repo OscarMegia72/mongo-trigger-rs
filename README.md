@@ -44,3 +44,6 @@ npm run replica
 npm list | grep mongo
 ```
 
+## Ejemplos con Server+Vue
+https://github.com/OscarMegia72/mongo-trigger-rs-demo
+
