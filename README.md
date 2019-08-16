@@ -38,4 +38,9 @@ mongodb://localhost:27017?w=0&readPreference=primary'
 ```
 npm run replica
 ```
+### Verificado de paquete npm
+
+```
+npm list | grep mongo
+```
 

@@ -1,10 +1,8 @@
 const MongoClient = require( "mongodb");
 const Emitter = require('events').EventEmitter
 const moment = require('moment')
-// class MyEmitter extends EventEmitter {}
 module.exports = {
   connected:undefined,
-  last_md5:undefined,
   isVerbose:false,
   map_collections: new Map(),
   sincro: new Emitter(),
@@ -43,7 +41,6 @@ module.exports = {
           this.connected.db(db).createCollection(col_name,options,function(err,res){
               if (err) throw err;
               if(this.isVerbose)console.log("Collection created!");
-              this.pos++
               return resolve('ok')
           })
   
